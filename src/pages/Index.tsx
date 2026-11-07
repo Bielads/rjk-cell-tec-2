@@ -201,7 +201,7 @@ export default function Index() {
                 <ArrowRight className="ml-1 h-4 w-4" />
               </WhatsAppButton>
               <Button asChild variant="outline" className="h-12 rounded-full px-6">
-                <a href="#produtos">Conheça a loja</a>
+                <a href="https://www.instagram.com/rjkcelltec/">Conheça a loja</a>
               </Button>
             </div>
             <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6">
