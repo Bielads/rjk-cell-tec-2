@@ -22,6 +22,7 @@ import heroImage from "@/assets/generated/hero-acessorios-assistencia.webp";
 import accessoriesImage from "@/assets/generated/variedade-acessorios-celular.webp";
 import repairImage from "@/assets/generated/tecnico-reparo-celular.webp";
 import serviceImage from "@/assets/generated/atendimento-especializado.webp";
+import storePhotos from "@/assets/uploads/16014.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -397,6 +398,50 @@ export default function Index() {
             </p>
             <div className="mt-7 flex items-center gap-3 border-l-2 border-primary pl-4">
               <span className="text-sm font-bold">Atendimento próximo, variedade e cuidado.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-muted/40 py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="mb-10 max-w-2xl">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Por dentro da RJK Cell Tec</p>
+            <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Conheça nossa loja.
+            </h2>
+            <p className="mt-4 text-base leading-7 text-muted-foreground">
+              Veja nossa fachada, o interior da loja e outro ângulo do espaço. Um pouco do lugar onde você encontra acessórios e atendimento especializado.
+            </p>
+          </div>
+          <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+            <div className="overflow-hidden rounded-[1.5rem] border border-border bg-background p-2 shadow-lg">
+              <img
+                src={storePhotos}
+                alt="Fachada principal da RJK Cell Tec, interior da loja com acessórios e fachada em outro ângulo"
+                className="h-auto w-full rounded-[1rem] object-contain"
+              />
+            </div>
+            <div className="rounded-[1.5rem] border border-border bg-card p-6 shadow-sm sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Estamos em São Paulo</p>
+              <h3 className="mt-3 font-display text-2xl font-extrabold tracking-tight">
+                Um espaço para cuidar do seu celular.
+              </h3>
+              <p className="mt-4 text-sm leading-6 text-muted-foreground">
+                Na RJK Cell Tec, você encontra variedade de acessórios e uma equipe pronta para ajudar com manutenção e reparos.
+              </p>
+              <div className="mt-6 border-t border-border pt-5">
+                <p className="text-sm font-semibold">Rua Jacintho Pereira, 411</p>
+                <p className="mt-1 text-sm text-muted-foreground">Parque Panamericano, São Paulo - SP</p>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Jacintho+Pereira%2C+411%2C+Parque+Panamericano%2C+S%C3%A3o+Paulo"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+              >
+                Ver como chegar <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
