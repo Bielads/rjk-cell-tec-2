@@ -23,6 +23,7 @@ import accessoriesImage from "@/assets/generated/variedade-acessorios-celular.we
 import repairImage from "@/assets/generated/tecnico-reparo-celular.webp";
 import serviceImage from "@/assets/generated/atendimento-especializado.webp";
 import storePhotos from "@/assets/uploads/16014.png";
+import logoImage from "@/assets/uploads/16025.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -115,9 +116,7 @@ export default function Index() {
       <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
           <a href="#inicio" className="flex shrink-0 items-center gap-3" aria-label="RJK Cell Tec, início">
-            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-              <Smartphone className="h-6 w-6" strokeWidth={2.5} />
-            </span>
+            <img src={logoImage} alt="Logo 3D da RJK Cell Tec" className="h-11 w-[76px] shrink-0 object-contain" />
             <span className="leading-tight">
               <span className="block font-display text-xl font-extrabold tracking-tight">
                 RJK <span className="text-primary">CELL TEC</span>
