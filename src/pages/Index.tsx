@@ -50,24 +50,40 @@ const navigation = [
 
 const categories = [
   {
-    title: "Capinhas & proteção",
-    description: "Mais estilo e cuidado para o seu aparelho.",
+    title: "Capinhas",
+    description: "Mais estilo e proteção para o seu aparelho.",
+    image: "https://picsum.photos/seed/rjk-capinhas/720/560",
     icon: ShieldCheck,
   },
   {
-    title: "Carregadores & cabos",
-    description: "Energia e conexão para acompanhar sua rotina.",
-    icon: Cable,
+    title: "Películas",
+    description: "Uma opção extra de cuidado para a tela.",
+    image: "https://picsum.photos/seed/rjk-peliculas/720/560",
+    icon: ShieldCheck,
   },
   {
-    title: "Fones & áudio",
-    description: "Acessórios para ouvir e curtir cada momento.",
+    title: "Carregadores",
+    description: "Acessórios para manter seu celular carregado.",
+    image: "https://picsum.photos/seed/rjk-carregadores/720/560",
+    icon: BatteryCharging,
+  },
+  {
+    title: "Fones de ouvido",
+    description: "Opções de áudio para acompanhar sua rotina.",
+    image: "https://picsum.photos/seed/rjk-fones/720/560",
     icon: Headphones,
   },
   {
-    title: "Suportes & utilidades",
-    description: "Praticidade para usar seu celular onde estiver.",
+    title: "Suportes",
+    description: "Mais praticidade para usar seu celular.",
+    image: "https://picsum.photos/seed/rjk-suportes/720/560",
     icon: Smartphone,
+  },
+  {
+    title: "Acessórios para celular",
+    description: "Consulte outras opções disponíveis na loja.",
+    image: "https://picsum.photos/seed/rjk-acessorios/720/560",
+    icon: Cable,
   },
 ];
 
@@ -165,21 +181,26 @@ export default function Index() {
         </div>
       </header>
 
-      <section id="inicio" className="relative">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-14 pt-12 sm:pt-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12 lg:px-8 lg:pb-20 lg:pt-16">
+      <section id="inicio" className="relative isolate overflow-hidden bg-foreground text-background">
+        <div className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-36 left-1/3 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 sm:py-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12 lg:px-8 lg:py-20">
           <div className="relative z-10">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-2 text-xs font-semibold tracking-wide text-muted-foreground">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-background/20 bg-background/5 px-3.5 py-2 text-xs font-semibold tracking-wide text-background/80">
               <span className="h-2 w-2 rounded-full bg-primary" />
-              SUA LOJA DE CONFIANÇA EM SÃO PAULO
+              RJK CELL TEC <span className="text-primary">·</span> SÃO PAULO
             </div>
             <h1 className="max-w-2xl text-balance font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.65rem]">
-              Tudo para o seu celular{" "}
-              <span className="text-primary">em um só lugar!</span>
+              Acessórios e assistência{" "}
+              <span className="text-primary">para cuidar do seu celular.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-pretty text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-              Capinhas, películas, carregadores e acessórios para sua rotina, além de
-              assistência técnica para cuidar do seu celular.
+            <p className="mt-6 max-w-xl text-pretty text-base leading-7 text-background/70 sm:text-lg sm:leading-8">
+              Encontre acessórios para a sua rotina e converse com a equipe sobre manutenção e reparos.
             </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full border border-background/15 bg-background/5 px-3 py-1.5 text-xs font-medium text-background/80">Capinhas, películas e mais</span>
+              <span className="rounded-full border border-background/15 bg-background/5 px-3 py-1.5 text-xs font-medium text-background/80">Assistência técnica</span>
+            </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton
                 className="h-12 gap-2 rounded-full px-6 text-sm"
@@ -189,32 +210,33 @@ export default function Index() {
                 Fale com a nossa equipe
                 <ArrowRight className="ml-1 h-4 w-4" />
               </WhatsAppButton>
-              <Button asChild variant="outline" className="h-12 rounded-full px-6">
+              <Button asChild variant="outline" className="h-12 rounded-full border-background/30 bg-transparent px-6 text-background hover:bg-background/10 hover:text-background">
                 <a href="#produtos">Conheça os produtos</a>
               </Button>
             </div>
-            <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6">
+            <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-background/15 pt-6">
               <div className="flex items-center gap-2">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/15 text-primary">
                   <ShieldCheck className="h-4 w-4" />
                 </span>
                 <span className="text-sm font-semibold">Acessórios para o dia a dia</span>
               </div>
-              <div className="h-7 w-px bg-border" />
-              <span className="text-sm text-muted-foreground">Atendimento próximo em São Paulo</span>
+              <div className="hidden h-7 w-px bg-background/20 sm:block" />
+              <span className="text-sm text-background/60">Atendimento próximo em São Paulo</span>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-primary/10" />
-            <div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-accent/30" />
-            <div className="relative overflow-hidden rounded-[1.75rem] border border-border bg-muted shadow-xl">
+          <div className="relative lg:pl-4">
+            <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-primary/20 blur-sm" />
+            <div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-background/10" />
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-background/15 bg-background/5 shadow-2xl shadow-black/30">
               <img
                 src={heroImage}
                 alt="Imagem ilustrativa de acessórios e assistência técnica para celulares"
+                fetchPriority="high"
                 className="aspect-[4/3] w-full object-cover sm:aspect-[16/10] lg:aspect-[1.13/1]"
               />
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 rounded-2xl border border-background/30 bg-background/90 p-4 shadow-lg backdrop-blur sm:bottom-6 sm:left-6 sm:right-6">
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 rounded-2xl border border-border/70 bg-background/95 p-4 text-foreground shadow-lg backdrop-blur sm:bottom-6 sm:left-6 sm:right-6">
                 <div>
                   <p className="font-display text-sm font-bold sm:text-base">Seu celular, bem cuidado.</p>
                   <p className="mt-1 text-xs text-muted-foreground">Produtos e suporte pertinho de você.</p>
@@ -224,6 +246,7 @@ export default function Index() {
                 </span>
               </div>
             </div>
+            <p className="mt-3 text-center text-xs text-background/50">Imagem ilustrativa de produtos e serviços</p>
           </div>
         </div>
       </section>
@@ -260,63 +283,56 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="produtos" className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
-          <div className="relative order-2 lg:order-1">
-            <img
-              src={accessoriesImage}
-              alt="Variedade de acessórios para celulares"
-              className="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
-            />
-            <div className="absolute -bottom-5 right-4 rounded-2xl border border-border bg-card px-5 py-4 shadow-lg sm:right-7">
-              <p className="font-display text-2xl font-extrabold text-primary">Tudo</p>
-              <p className="mt-0.5 text-xs font-medium text-muted-foreground">para o seu celular</p>
+      <section id="produtos" className="relative overflow-hidden bg-muted/50 py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="mb-9 flex flex-col justify-between gap-5 sm:mb-12 sm:flex-row sm:items-end">
+            <div className="max-w-2xl">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Vitrine RJK Cell Tec</p>
+              <h2 className="mt-3 text-balance font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
+                Acessórios para acompanhar você.
+              </h2>
+              <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
+                Explore as categorias e consulte nossa equipe sobre opções disponíveis na loja.
+              </p>
             </div>
+            <WhatsAppButton
+              className="w-fit shrink-0 gap-2 rounded-full px-5"
+              message="Olá! Gostaria de consultar os acessórios disponíveis na RJK Cell Tec."
+            >
+              Consultar pelo WhatsApp <ArrowRight className="h-4 w-4" />
+            </WhatsAppButton>
           </div>
-          <div className="order-1 lg:order-2">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Produtos & acessórios</p>
-            <h2 className="mt-4 max-w-xl text-balance font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
-              Mais possibilidades para o seu dia a dia.
-            </h2>
-            <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">
-              Do cuidado com o aparelho à praticidade que facilita sua rotina,
-              você encontra uma seleção de acessórios na RJK Cell Tec.
-            </p>
-            <div id="categorias" className="mt-8 grid gap-3 sm:grid-cols-2">
-              {categories.map(({ title, description, icon: Icon }) => (
-                <Card key={title} className="border-border bg-card shadow-none transition-all hover:-translate-y-0.5 hover:shadow-md">
-                  <CardContent className="flex h-full flex-col gap-3 p-4">
-                    <div className="flex gap-3">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                        <Icon className="h-5 w-5" />
-                      </span>
-                      <div>
-                        <h3 className="text-sm font-bold">{title}</h3>
-                        <p className="mt-1 text-xs leading-5 text-muted-foreground">{description}</p>
-                      </div>
-                    </div>
-                    <a
-                      href={whatsappLinkWithMessage(`Olá! Gostaria de consultar ${title.toLowerCase()} na RJK Cell Tec.`)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-auto inline-flex min-h-10 items-center gap-2 text-xs font-semibold text-primary transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                    >
-                      Consultar pelo WhatsApp <ArrowRight className="h-3.5 w-3.5" />
-                    </a>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <WhatsAppButton
-                className="gap-2 rounded-full px-5"
-                message="Olá! Gostaria de consultar os acessórios disponíveis na RJK Cell Tec."
-              >
-                Consulte os acessórios
-                <ArrowRight className="h-4 w-4" />
-              </WhatsAppButton>
-            </div>
+          <div id="categorias" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {categories.map(({ title, description, image, icon: Icon }) => (
+              <Card key={title} className="group overflow-hidden gap-0 border-border/80 bg-card py-0 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className="relative overflow-hidden bg-muted">
+                  <img
+                    src={image}
+                    alt={`Imagem provisória para a categoria ${title}`}
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl border border-background/50 bg-background/90 text-primary shadow-sm backdrop-blur">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                </div>
+                <CardContent className="flex flex-1 flex-col p-5">
+                  <h3 className="font-display text-lg font-bold">{title}</h3>
+                  <p className="mt-2 min-h-10 text-sm leading-5 text-muted-foreground">{description}</p>
+                  <a
+                    href={whatsappLinkWithMessage(`Olá! Gostaria de consultar ${title.toLowerCase()} na RJK Cell Tec.`)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex min-h-11 items-center gap-2 self-start text-sm font-semibold text-primary transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
+                    Consultar disponibilidade <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
           </div>
+          <p className="mt-5 text-xs text-muted-foreground">Imagens provisórias ilustrativas; consulte a equipe para conhecer as opções da loja.</p>
         </div>
       </section>
 
@@ -331,14 +347,14 @@ export default function Index() {
               Conte com a equipe da RJK Cell Tec para manutenção e reparos.
               Converse com a gente, explique o que aconteceu e peça um orçamento.
             </p>
-            <ul className="mt-7 space-y-4">
+            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
               {[
                 "Manutenção e reparos de celulares",
                 "Atendimento atencioso para entender o problema",
                 "Orçamento direto com a nossa equipe",
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm font-medium">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                <li key={item} className="flex items-start gap-3 rounded-xl border border-background/10 bg-background/5 p-4 text-sm font-medium leading-6">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
                     <Check className="h-3.5 w-3.5" />
                   </span>
                   {item}
